@@ -1,0 +1,59 @@
+Current transformer ratio (KTA)
+Voltage transformer ratio (KTV)
+Phase 1 : phase voltage 
+Phase 2 : phase voltage
+Phase 3 : phase voltage
+Phase 1 : active power
+Phase 2 : active power
+Phase 3 : active power
+Phase 1 : current
+Phase 2 : current
+Phase 3 : current
+Neutral current
+Chained voltage : L1-L2
+Chained voltage : L2-L3
+Chained voltage : L3-L1
+3-phase : positive active energy
+3-phase : positive reactive energy
+3-phase : negative active energy
+3-phase : negative reactive energy
+3-phase : power factor
+3-phase : sector of power factor (cap or ind)
+Frequency
+Phase 1 : I1 average
+Phase 2 : I2 average
+Phase 3 : I3 average
+Phase 1 : I1 peak maximum
+Phase 2 : I2 peak maximum
+Phase 3 : I3 peak maximum
+(I1+I2+I3)/3
+Phase 1 : V1 min 
+Phase 2 : V2 min
+Phase 3 : V3 min
+Phase 1 : V1 max
+Phase 2 : V2 max
+Phase 3 : V3 max
+3-phase : active average power
+3-phase : reactive average power
+3-phase : apparent average power
+3-phase : active PMD power  (2nd)
+3-phase : reactive PMD power  (2nd)
+3-phase : apparent PMD power  (2nd)
+Signed 3-ph Active Power
+Signed 3-ph Reactive Power
+Signed Phase1 Active Power
+Signed Phase2 Active Power
+Signed Phase3 Active Power
+Signed Phase1 Reactive Power
+Signed Phase2 Reactive Power
+Signed Phase3 Reactive Power
+Signed 3-ph Power Factor
+Signed Phase1 Power Factor
+Signed Phase2 Power Factor
+Signed Phase3 Power Factor
+THD I1
+THD I2
+THD I3
+THD V1 (V12)
+THD V2 (V23)
+THD V3 (V31)

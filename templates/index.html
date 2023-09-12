@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Influxdb Export Tool</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Export Tool</h1>
+        </header>
+        <main>
+            <div id="container3" class="form-container">
+                <h2>Export Mode</h2>
+                <label class="toggle-switch" title="Selct mode">
+                    <input type="checkbox" id="toggleCheckbox">
+                    <span class="slider"></span>
+                </label>
+                    <div class="mycontainer">
+                        <div class="left-box">
+                            <label class="form-label" for="fromDate">From:</label>
+                            <input type="date" id="fromDate" name="fromDate">
+                        </div>
+                        <div class="right-box">
+                            <label class="form-label" for="toDate">To:</label>
+                            <input type="date" id="toDate" name="toDate">
+                        </div>
+                    </div>
+            </div>
+            <div id="container1" class="form-container">
+                <h2>Send CSV via Email</h2>
+                <p>Select a measurement and receive csv data in your mail</p>
+                <div class="mini-container">
+                    <label for="comboBox" class="form-label">Select measurement</label>
+                    <select id="comboBox">
+                        <!-- Options will be added dynamically-->
+                    </select>
+                </div>
+                <div class="mini-container">
+                    <form>
+                        <label for="email" class="form-label">Enter your email address:</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required />
+                        <button type="submit" id="submit-button" class="form-button">Submit</button>
+                    </form>
+                    <label class="form-label">Operation Progress</label>
+                    <div class="progress-bar">
+                        <div id="prgrss-bar" class="progress-filler"></div>
+                    </div>
+                    <div id="prgrss-txt" class="progress-text"></div>
+                </div>
+            </div>
+            <div id="container2" class="form-container inactive">
+                <h2>Download CSV via Browser</h2>
+                <p>Download Full list of csv from your browser</p>
+                <div class="mini-container">
+                    <div class="mycontainer">
+                        <div class="left-box">
+                            <div id="mydropdown" class="dropdown" data-control="checkbox-dropdown">
+                                <label class="dropdown-label">Select</label>
+        
+                                <div id="mySelectOptions" class="dropdown-list">
+                                  <a id="checkAll" href="#" data-toggle="check-all" class="dropdown-option">
+                                    Check All  
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-box">
+                            <button type="submit" id="start-button" class="form-button">Start</button>
+
+                        </div>
+                    </div>
+                   
+                    <div id="dropdown-text">
+                        <ul id="tag-container" class="tags">
+                        </ul>
+                    </div>
+
+
+                    <div class="progress-heading">Operation Progress</div>
+                    <div class="progress-bar">
+                        <div id="prgrss-bar-2" class="progress-filler"></div>
+                    </div>
+                    <div id="prgrss-txt-2" class="progress-text"></div>
+                </div>
+                <h2>CSV File List</h2>
+                <div class="mini-container">
+                    <table id="fileTable">
+                        <thead>
+                            <tr>
+                                <th>File Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <button type="submit" id="downloadAll" class="form-button">Download All</button>
+                    <button type="submit" id="cleanAll" class="form-button red">Clean All</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2023 Export Tool. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
